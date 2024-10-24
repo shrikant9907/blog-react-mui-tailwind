@@ -18,13 +18,20 @@ const BlogDetails = () => {
   const baseURL = process.env.REACT_APP_API_URI;
 
   const fetchPost = async (id) => {
+    // GET | POST | PUT | PATCH
+
+    // POST 
+    // API URL
+    // Payload
+    // Callback
+
     setLoading(true)
     try {
-      const post = await axios.get(baseURL + '/posts/' + id);
+      const post = await axios.get(baseURL + '/posts/' + id); // API URL /Post | Put | Patch
 
       if (post.status === 200) {
         toast.success('Post loaded successfully.')
-        setBlogPost(post?.data || [])
+        setBlogPost(post?.data || []) // Callback
       } else {
         toast.error('Unable to load the data')
       }

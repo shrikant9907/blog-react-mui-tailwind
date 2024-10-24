@@ -45,6 +45,7 @@ const BlogListing = () => {
 
   const pageCounts = blogPosts?.length / 5;
 
+
   return (
     <div className='py-11'>
       <Typography sx={{ mb: "44px" }} gutterBottom variant="h3">
